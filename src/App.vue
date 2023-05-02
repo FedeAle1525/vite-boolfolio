@@ -17,9 +17,13 @@ export default {
   <Projects />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   padding: 20px 0;
-  text-align: center;
+
+  h1 {
+    text-align: center;
+  }
+
 }
 </style>
