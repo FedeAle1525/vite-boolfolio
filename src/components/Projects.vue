@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import ProjectCard from './ProjectCard.vue';
 
 export default {
 
@@ -9,6 +10,10 @@ export default {
       // Array in cui verranno messi i dati pescati tramite API dal DB
       projects: [],
     }
+  },
+
+  components: {
+    ProjectCard
   },
 
   methods: {
@@ -42,10 +47,16 @@ export default {
 
 <template>
   <div class="container">
-    <p v-for="project in projects" :key="project.id">
-      {{ project.id }} - {{ project.name }}
-    </p>
+    <div class="grid">
+      <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+}
+</style>
