@@ -10,9 +10,13 @@ export default {
     <nav>
       <ul>
         <li>
-          <route-link :to="{ name: 'home' }">Home</route-link>
+          <!-- Link alla Rotta 'home' -->
+          <router-link :to="{ name: 'home' }">Home</router-link>
         </li>
-        <li>PortFolio</li>
+        <li>
+          <!-- Link alla Rotta 'portfolio.index' -->
+          <router-link :to="{ name: 'portfolio.index' }">PortFolio</router-link>
+        </li>
         <li>Chi Sono</li>
       </ul>
     </nav>
