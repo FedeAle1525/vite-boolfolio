@@ -17,7 +17,10 @@ export default {
           <!-- Link alla Rotta 'portfolio.index' -->
           <router-link :to="{ name: 'portfolio.index' }">PortFolio</router-link>
         </li>
-        <li>Chi Sono</li>
+        <li>
+          <!-- Link alla Rotta 'about' -->
+          <router-link :to="{ name: 'about' }">Chi Sono</router-link>
+        </li>
       </ul>
     </nav>
   </header>
