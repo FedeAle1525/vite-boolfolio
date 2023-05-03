@@ -1,20 +1,21 @@
 <script>
-import Projects from './components/Projects.vue';
+import NavBar from './components/NavBar.vue';
 
 export default {
 
   components: {
-    Projects
+    NavBar
   }
 }
 </script>
 
 <template>
-  <div class="container">
-    <h1>Progetti</h1>
-  </div>
+  <NavBar />
 
-  <Projects />
+  <!-- TAG che permette al Router di Montare i Componenti Radice indicati nelle Rotte -->
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
 
 <style lang="scss" scoped>
