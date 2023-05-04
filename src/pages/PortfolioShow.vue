@@ -2,6 +2,8 @@
 
 export default {
 
+  // Indico che il Parametro 'slug' passatto alla Rotta viene usato come Proprietà
+  props: ['slug']
 
 }
 </script>

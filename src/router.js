@@ -33,8 +33,10 @@ const router = createRouter({
 
     {
       path: '/projects/:slug',
-      name: 'portofolio.show',
-      component: PortfolioShow
+      name: 'portfolio.show',
+      component: PortfolioShow,
+      // Indica che le Parametro della Rotta verrà usato come Proprietà del componente
+      props: true
     }
   ]
 })

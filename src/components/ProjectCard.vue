@@ -21,16 +21,20 @@ export default {
 </script>
 
 <template>
-  <div class="card">
-    <h4> "{{ project.name }}" </h4>
-    <span class="type"> {{ project.type ? project.type.name : "Nessuna" }}</span>
-    <ul v-if="project.technologies.length > 0">
-      <li v-for="tech in project.technologies">
-        {{ tech.name }}
-      </li>
-    </ul>
-    <span class="no-tag" v-else> Nessun TAG</span>
-  </div>
+  <!-- Link che porta alla Rotta 'Show' -->
+  <router-link :to="{ name: 'portfolio.show', params: { slug: project.slug } }">
+    <div class="card">
+
+      <h4> "{{ project.name }}" </h4>
+      <span class="type"> {{ project.type ? project.type.name : "Nessuna" }}</span>
+      <ul v-if="project.technologies.length > 0">
+        <li v-for="tech in project.technologies">
+          {{ tech.name }}
+        </li>
+      </ul>
+      <span class="no-tag" v-else> Nessun TAG</span>
+    </div>
+  </router-link>
 </template>
 
 <style lang="scss" scoped>
