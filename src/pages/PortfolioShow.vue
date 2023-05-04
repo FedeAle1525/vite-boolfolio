@@ -34,7 +34,7 @@ export default {
 
             // In caso di 'errore' faccio Redirect a una Rotta che mostra errore
             // Acceddo al Router per fare un Redirect
-            // this.$router.replace({ name: '404' });
+            this.$router.replace({ name: 'error404' });
           }
         })
 

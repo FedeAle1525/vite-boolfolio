@@ -4,6 +4,7 @@ import Home from './pages/Home.vue'
 import Portfolio from './pages/Portfolio.vue'
 import PortfolioShow from './pages/PortfolioShow.vue'
 import About from './pages/About.vue'
+import Page404 from './pages/Page404.vue'
 
 // 2 - Creazione del Router
 const router = createRouter({
@@ -26,18 +27,26 @@ const router = createRouter({
     },
 
     {
+      path: '/projects/:slug',
+      name: 'portfolio.show',
+      component: PortfolioShow,
+      // Indica che le Parametro della Rotta verrà usato come Proprietà del componente
+      props: true
+    },
+
+    {
       path: '/about',
       name: 'about',
       component: About
     },
 
     {
-      path: '/projects/:slug',
-      name: 'portfolio.show',
-      component: PortfolioShow,
-      // Indica che le Parametro della Rotta verrà usato come Proprietà del componente
-      props: true
+      path: '/error404',
+      name: 'error404',
+      component: Page404
     }
+
+
   ]
 })
 
